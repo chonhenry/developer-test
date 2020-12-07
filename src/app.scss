@@ -1,0 +1,65 @@
+.app {
+  width: 100vw;
+  height: 100vh;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    width: 400px;
+    height: 540px;
+    background-color: pink;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 0 5px 5px grey;
+
+    .title {
+      margin: 0;
+    }
+
+    .item-container {
+      width: 300px;
+      height: 300px;
+      background-color: white;
+      border: 2px solid grey;
+      padding: 10px;
+      overflow: auto;
+
+      .item {
+        margin-bottom: 5px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .item-input {
+      width: 300px;
+      padding: 9px;
+      border: 2px solid grey;
+      border-radius: 6px;
+    }
+
+    .btn {
+      background-color: lightgreen;
+      width: 300px;
+      text-align: center;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .add-btn {
+      width: 150px;
+    }
+  }
+}

@@ -1,7 +1,4 @@
-import {
-  ADD_ITEM,
-  DELETE_ITEM,
-} from './actions';
+import { ADD_ITEM, DELETE_ITEM } from "./actions";
 
 const INITIAL_STATE = {
   wishList: [],
@@ -11,16 +8,18 @@ const INITIAL_STATE = {
 const reducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case ADD_ITEM:
+      // add the new item to wish list
       return {
-        wishList: ,
+        wishList: [...state.wishList, action.payload],
       };
     case DELETE_ITEM:
+      // remove an item from wish list
       return {
-        wishList: ,
+        wishList: state.wishList.filter((item) => item !== action.payload),
       };
     default:
       return {
-        wishList: ,
+        wishList: [...state.wishList],
       };
   }
 };
